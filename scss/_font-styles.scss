@@ -1,0 +1,133 @@
+
+._main-title {
+    font-family: var(--main-font);
+    font-weight: 700;
+    color: var(--white);
+    font-size: 2.25rem;
+    line-height: 100%;
+    margin: 0;
+
+    @include _769 {
+        font-size: 3.625rem;
+    }
+    @include _992 {
+        font-size: 6rem;
+    }
+    
+    
+    & ._decor-title::before {
+        width: 75px;
+        transform: translate(-25%,-17px);
+
+        @include _769 {
+            width: 100px;
+        }
+        @include _992 {
+            width: 150px;
+            transform: translate(-35%,-12%);
+        }
+        
+    }
+}
+
+._accent-span {
+    color: transparent;
+    background: var(--accent-gradient-text);
+    background-clip: text;
+
+    &._alt {
+        color: transparent;
+        background: linear-gradient(180deg, #6D54DB 0%, #59A2DD 100%);
+        background-clip: text;
+    }
+}
+
+._accent-color {
+    font-weight: 600;
+    color: var(--accent);
+    &._alt {
+        color: var(--accent-alt);
+    }
+}
+
+._title {
+    
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 1.6875rem;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    @include _769 {
+        font-size: 2.25rem;
+    }
+    @include _992 {
+        font-size: 3.5rem;
+    }
+
+    
+    & ._decor-title::before {
+        width: 47px;
+        transform: translate(-35%,-10px);
+        @include _769 {
+            width: 80px;
+            transform: translate(-25%,-25%);
+        }
+        @include _992 {
+            width: 115px;
+            transform: translate(-25%,-25%);
+        }
+        /* width: 150px;
+        top: 50%; */
+        //transform: translate(-40%,-50%);
+        
+    }
+    & ._decor-title._right::before {
+
+        transform: translate(30%,20%);
+        
+    }
+    &._min {
+        font-size: 1rem;
+        font-weight: 800;
+        @include _769 {
+            font-size: 1.25rem;
+            
+        }
+        @include _992 {
+            font-size: 1.625rem;
+            font-weight: 700;
+        }
+        
+        line-height: 135%;
+        
+        & ._decor-title::before {
+            width: 40px;
+            transform: translate(30%,25%);
+            @include _992 {
+                width: 60px;
+                transform: translate(30%,25%);
+            }
+            @include _769 {
+                width: 50px;
+                transform: translate(30%,25%);
+            }
+        }
+        
+        
+    }
+    &._subtitle-type {
+        font-size: 1.125rem;
+        @include _992 {
+            font-size: 1.35rem;
+        }
+        font-weight: 600;
+        line-height: 132%;
+        text-transform: none;
+        
+    }
+}
+
+/* .section-title {
+
+} */

@@ -1,0 +1,71 @@
+@import 'mixin.scss';
+@import 'null.scss';
+@import 'libs.scss';
+@import 'vars.scss';
+@import 'global.scss';
+@import 'font-styles';
+@import 'popup.scss';
+@import 'animate.scss';
+
+@import 'main-sections/header';
+
+._decor-title {
+    
+    position: relative;
+    z-index: 2;
+    //display: grid;
+    display: inline;
+    &::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        /* position: absolute;
+        left: 0; top: 0;
+        transform: translate(-35%, -22%); */
+        width: 70%;
+        transform: translate(0%,40%);
+        aspect-ratio: 1/1;
+        position: absolute;
+        left: 0; top: 0;
+        
+        //padding: 35%;
+        
+        z-index: -1;
+        background: url("data:image/svg+xml,%3Csvg width='49' height='41' viewBox='0 0 49 41' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36.2169 1H12.7169L1 20.5L12.7169 40H36.2169L48 20.5L36.2169 1Z' stroke='url(%23paint0_linear_268_1871)' stroke-width='0.8621' stroke-miterlimit='10'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_268_1871' x1='0.667293' y1='20.4977' x2='48.3066' y2='20.4977' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23A728DA'/%3E%3Cstop offset='0.697' stop-color='%23548EF7'/%3E%3Cstop offset='1' stop-color='%237DC6FD'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
+        center center / contain no-repeat;
+    }
+
+    & ._decor-title-content {
+        //grid-area: 1/1;
+    }
+
+    &._right {
+        &::before {
+            left: auto; right: 0;
+            top: auto; bottom: 0;
+            transform: translate(30%,30%);
+        }
+    }
+    &._right._top {
+        //display: grid;
+        &::before {
+            //position: static;
+            //grid-column: 2 / 2;
+            /* transform: translate(30%,75%);
+            bottom: auto; top: -100%;
+            left: 100%; */
+        }
+    }
+
+}
+
+@import 'pages/main-page/intro';
+@import 'pages/main-page/about-us';
+@import 'pages/main-page/about-training';
+@import 'pages/main-page/levels-training';
+@import 'pages/main-page/first-lesson';
+@import 'pages/main-page/tariffs';
+@import 'pages/main-page/statistics';
+@import 'pages/main-page/reviews';
+
+@import 'main-sections/footer';

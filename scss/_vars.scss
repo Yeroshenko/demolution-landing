@@ -1,0 +1,113 @@
+
+
+
+$accent: teal;
+
+$white: #FFFFFF;
+$black: #000000;
+
+$hexagon: polygon(98.66025% 45%, 99.39693% 46.5798%, 99.84808% 48.26352%, 100% 50%, 99.84808% 51.73648%, 99.39693% 53.4202%, 98.66025% 55%, 78.66025% 89.64102%, 77.66044% 91.06889%, 76.42788% 92.30146%, 75% 93.30127%, 73.4202% 94.03794%, 71.73648% 94.48909%, 70% 94.64102%, 30% 94.64102%, 28.26352% 94.48909%, 26.5798% 94.03794%, 25% 93.30127%, 23.57212% 92.30146%, 22.33956% 91.06889%, 21.33975% 89.64102%, 1.33975% 55%, 0.60307% 53.4202%, 0.15192% 51.73648%, 0% 50%, 0.15192% 48.26352%, 0.60307% 46.5798%, 1.33975% 45%, 21.33975% 10.35898%, 22.33956% 8.93111%, 23.57212% 7.69854%, 25% 6.69873%, 26.5798% 5.96206%, 28.26352% 5.51091%, 30% 5.35898%, 70% 5.35898%, 71.73648% 5.51091%, 73.4202% 5.96206%, 75% 6.69873%, 76.42788% 7.69854%, 77.66044% 8.93111%, 78.66025% 10.35898%);
+
+:root {
+    --container: 1180px;
+    --container-large: 1680px;
+
+    --accent: #456AE7;
+    --accent-alt: #864DFF;
+    --accent-dark: #040114;
+    --accent-text: #0D2A6B;
+    --white: #FFF;
+
+    
+
+    --accent-gradient-dark: linear-gradient(180deg, #040114 0%, #07032B 100%);
+    --accent-gradient: linear-gradient(219.43deg, #040114 24.07%, #080435 39.3%, #130F3D 79.8%, #000000 146.93%);
+    --accent-gradient-decor: linear-gradient(135.01deg, #7DC6FD 14.02%, #548EF7 35.6%, #A728DA 85.24%);
+    --accent-gradient-btn: linear-gradient(122.93deg, #7345D3 -137.34%, #5470F0 38.32%, #1858CD 129.02%);
+    --accent-gradient-text: linear-gradient(334.28deg, #4E9CDB -27.94%, #5761D7 -5.93%);
+
+    --border-width: 1px;
+
+
+    --main-font: 'MazzardM';
+}
+
+
+$container: 1180;
+$containerMin: 1000;
+$containerLarge: 1000;
+
+/* @font-face {
+    @include font-include('HelveticaNeue', 700, swap, normal, 'HelveticaNeueCyr-Bold');
+}
+@font-face {
+    @include font-include('HelveticaNeue', 500, swap, normal, 'HelveticaNeueCyr-Medium');
+}
+@font-face {
+    @include font-include('HelveticaNeue', 400, swap, normal, 'HelveticaNeueCyr-Roman');
+} */
+@font-face {
+    @include font-include('MazzardM', 700, swap, normal, 'MazzardM-Bold');
+}
+@font-face {
+    @include font-include('MazzardM', 800, swap, normal, 'MazzardM-ExtraBold');
+}
+@font-face {
+    @include font-include('MazzardM', 200, swap, normal, 'MazzardM-ExtraLight');
+}
+@font-face {
+    @include font-include('MazzardM', 300, swap, normal, 'MazzardM-Light');
+}
+@font-face {
+    @include font-include('MazzardM', 500, swap, normal, 'MazzardM-Medium');
+}
+@font-face {
+    @include font-include('MazzardM', 400, swap, normal, 'MazzardM-Regular');
+}
+@font-face {
+    @include font-include('MazzardM', 600, swap, normal, 'MazzardM-SemiBold');
+}
+
+@font-face {
+    font-family: 'demolution-icons';
+    src:
+      url('demolution-icons.ttf?hhj9o8') format('truetype'),
+      url('demolution-icons.woff?hhj9o8') format('woff'),
+      url('demolution-icons.svg?hhj9o8#demolution-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="_icon-"], [class*=" _icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'demolution-icons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  ._icon-to-down-arrow::before {
+    content: "\e904";
+  }
+  ._icon-to-down-line::before {
+    content: "\e903";
+  }
+  ._icon-review-quotes::before {
+    content: "\e901";
+  }
+  ._icon-to-up-line::before {
+    content: "\e900";
+  }
+  ._icon-to-up-arrow::before {
+    content: "\e902";
+  }
+  
+  
