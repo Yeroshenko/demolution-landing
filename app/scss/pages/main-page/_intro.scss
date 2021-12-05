@@ -301,9 +301,11 @@
         margin-top: -25px;
         margin-bottom: -95px;
 
+
         @include _426 {
             margin-top: -50px;
             margin-bottom: -100px;
+            display: none;
         }
         @include _769 {
             position: absolute;
@@ -324,9 +326,7 @@
         }
 
         @include _992 {
-
             right: -20%;
-
         }
 
         background-color: var(--accent-dark);
