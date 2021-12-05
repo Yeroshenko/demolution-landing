@@ -456,7 +456,7 @@
             flex: 1 1 100%;
             @media(min-width: #{$container}px) {
                 flex: 0 0 60%;
-                transform: translate(-25%,0);
+                //transform: translate(-25%,0);
             }
 
 
@@ -479,6 +479,8 @@
             @media(min-width: #{$container}px) {
                 font-size: 1.35rem;
                 text-align: left;
+                position: absolute;
+                left: 45px;
 
             }
             color: #051A3A;
@@ -499,7 +501,7 @@
                 font-size: 3rem;
                 font-weight: 500;
                 @media(min-width: #{$container}px) {
-                    font-size: 3.5rem;
+                    font-size: 3rem;
                 }
             }
 
