@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "build": "gulp build"
   },
   "author": "luteet",
   "license": "ISC",
@@ -28,10 +29,8 @@
     "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.1",
     "gulp-webp-html": "^1.0.2",
-    "i": "^0.3.7",
     "mobile-detect": "^1.4.5",
     "normalize.css": "^8.0.1",
-    "npm": "^8.1.4",
     "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^7.3.0",
     "wowjs": "^1.1.3"

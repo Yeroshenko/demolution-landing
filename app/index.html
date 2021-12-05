@@ -21,9 +21,9 @@
                 </span>
             </h1>
             <div class="intro__info--text _text" data-aos="fade-in" data-aos-delay="800" data-aos-anchor=".intro">
-                <p>
+                <h2>
                     Это собрание единомышленников в сфере инвестиции и торговли криптовалют
-                </p>
+                </h2>
             </div>
             <ul class="intro__info--link-list" data-aos="fade-in" data-aos-delay="1200" data-aos-anchor=".intro">
                 <li class="intro__info--link-item">
@@ -58,23 +58,11 @@
                 </li>
             </ul>
             <div class="intro__video" data-aos="fade-in" data-aos-delay="2000" data-aos-anchor=".intro">
-                <video width="546" autoplay muted loop class="intro__video--block" playsinline>
-                    <source 
-                    data-src_start="video/video.webm"
-                    data-src_992="video/video-table.webm"
-                    data-src_425="video/video-mob.webm"
-                    src="#" type="video/webm">
+                <video id="intro-video" width="546" autoplay muted loop class="intro__video--block" playsinline data-src="video/planet-370.webm">
+                    <source data-src="video/planet-546.webm" data-mw="1080" src="/">
+                    <source data-src="video/planet-500.webm" data-mw="992" src="/">
+                    <source data-src="video/planet-370.webm" data-mw="768" src="/">
                 </video>
-                <picture>
-                    <source srcset="img/first-lesson/popup-image.webp" type="image/webp">
-                    <img src="img/first-lesson/popup-image.jpg" loading="lazy" alt="" class="intro__video--block-preview">
-                </picture>
-                <div class="intro__video--block-alt">
-                    <picture>
-                        <source srcset="video/video-mob.webp" type="image/webp">
-                        <img src="video/video-mob.gif" loading="lazy" alt="" class="intro__video--block-alt-img">
-                    </picture>
-                </div>
             </div>
         </div>
         <div class="intro__decor-footer">
@@ -96,8 +84,8 @@
         </picture>
         <div class="about-us__bg"></div>
         <div class="about-us__container _container">
-            <div class="about-us__image _decor-hexagon" data-aos="fade-in" data-aos-anchor-placement="top-center">
-                <div class="about-us__image--img-elem" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".about-us__image" data-aos-anchor-placement="top-center">
+            <div class="about-us__image _decor-hexagon">
+                <div class="about-us__image--img-elem" >
                     <picture>
                         <source srcset="img/about-us/phone.webp" type="image/webp">
                         <img src="img/about-us/phone.png" loading="lazy" width="343" alt="" class="about-us__image--img _decor-img">
@@ -163,18 +151,24 @@
                         Demolution <span class="_accent-span">club</span>
                     </span>
                 </h2>
-                <h3 class="about-us__info--subtitle _title _subtitle-type">
+                <h3 class="about-us__info--subtitle _title _subtitle-type" data-aos="fade-up" data-aos-anchor=".about-us__image">
                     Мы только на старте крипто-эпохи, многие еще даже не понимают что такое инфляция. Если ты думаешь что уже опоздал сесть на этот поезд, то спешу сообщить что только начался продаж билетов
                 </h3>
-                <div class="about-us__info--text">
+                <div class="about-us__info--text" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".about-us__image">
                     <p>
-                        Не бойтесь пробовать, мы разрушим ваш стереотип о том что в интернете не можно зарабатывать. Наша задача направить ваши мысли в русло которое даст вам возможность избежать тех ошибок, которые многие совершают на старте изучения трейдинга. 
+                        Не бойтесь пробовать, мы разрушим ваш стереотип о том что в интернете не можно зарабатывать. Наша задача направить ваши мысли в русло которое даст вам возможность избежать тех ошибок, которые многие совершают на старте изучения трейдинга.
                     </p>
                 </div>
             </div>
             <div class="about-us__services">
                 <span class="about-us__services--dashed-line"></span>
-                <h2 class="about-us__services--title _title _min" data-aos="fade-up" data-aos-delay="2000" data-aos-anchor=".about-us__image" data-aos-anchor-placement="top-center">
+                <h2
+                  class="about-us__services--title _title _min"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  data-aos-anchor-placement="top-center"
+                  data-aos-anchor=".about-us__image"
+                >
                     <span class="_decor-title _right">
                         Все это предоставит вам администрация
                         <span class="_accent-span">
@@ -182,7 +176,13 @@
                         </span>
                     </span>
                 </h2>
-                <ul class="about-us__services--list" data-aos="fade-up" data-aos-delay="2400" data-aos-anchor=".about-us__image" data-aos-anchor-placement="top-center">
+                <ul
+                  class="about-us__services--list"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                  data-aos-anchor=".about-us__image"
+                  data-aos-anchor-placement="top-center"
+                >
                     @@include("html-components/_service-item.html", {
                         "icon": "1",
                         "width-icon": "",
@@ -208,7 +208,7 @@
                         "width-icon": "",
                         "title": "Обучение",
                     })
-                    
+
                 </ul>
             </div>
         </div>
@@ -227,7 +227,7 @@
         <div class="about-training__container _container">
             <h2 class="about-training__title _title" data-aos="fade-right" data-aos-delay="200" data-aos-anchor=".about-training__container" data-aos-anchor-placement="top-center">
                 <span class="_decor-title">
-                    Информация 
+                    Информация
                 </span>
                 <span class="_accent-span">
                     об обучении
@@ -305,7 +305,7 @@
             <div class="levels-training__info">
                 <h2 class="levels-training__info--title _title" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-anchor=".levels-training__container">
                     <span class="_decor-title _right">
-                        Почему стоит выбрать 
+                        Почему стоит выбрать
                     </span>
                     <br>
                     <span class="_decor-title _accent-span _alt">
@@ -315,7 +315,7 @@
             </div>
             <div class="levels-training__block" data-aos="fade-down" data-aos-delay="400"data-aos-anchor-placement="top-center" data-aos-anchor=".levels-training__container">
                 <h3 class="levels-training__block--title">
-                    Будет всего 
+                    Будет всего
                     <b>
                         3 уровня сложности:
                     </b>
@@ -323,34 +323,43 @@
                 <ul class="levels-training__block--list levels-training__list _tab-wrapper">
                     <li class="levels-training__list--item _tab-block _active _fade-in">
                         <p>
-                            В каждой из который будут темы которые вас следует поочередно проходить. После каждой пройденной темы вас будет ждать тест. Как и с школьной системой, за каждый тест и контрольный тест вам начисляли балы, мы же будем начислять вам проценты. 
+                            В каждой из который будут темы которые вас следует поочередно проходить. После каждой пройденной темы вас будет ждать тест. Как и с школьной системой, за каждый тест и контрольный тест вам начисляли балы, мы же будем начислять вам проценты.
                         </p>
                         <p>
-                            Это не просто один файл с материалом, который большинство "крипто-проффесоров" кидает и забывает. Это целое веб-приложение, в котором вы будете проходить уроки поочередно. 
+                            Это не просто один файл с материалами, который большенство «крипто-проффесоров» кидает, и забывает о своём ученике. Это целая онлайн-школа, которая будет обновляться регулярно и даст наиболее качественный результат обучения.
                         </p>
                     </li>
                     <li class="levels-training__list--item _tab-block _fade-in" id="levels-training-junior">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure delectus aut, facilis fugiat rerum omnis animi accusamus dolor distinctio deserunt nostrum dolorem aliquid nam dignissimos velit doloremque obcaecati impedit soluta?
+                            Junior Level - первый уровень нашей школы с которым столкнётся каждый ученик. В нём заложен фундамент без которого не обойтись в трейдинге. Базовые знания всегда являются одним из главных элементов обучения, в любой сфере. Погружения в теоретическую сферу деятельности есть неизбежным фактором обучения, а игнорирования начального этапа обучения может стать простой, и в то же время фатальной ошибкой на рынке, из-за которой вы потеряете все!
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus fugiat expedita aspernatur dolore quod rerum pariatur non velit, rem aliquam quasi assumenda aliquid cum impedit? Corrupti iusto quae rerum nisi.
+                            В этот уровень будет входить ознакомления с самой концепцией рынка криптовалют. Где и как покупать криптовалюту, как управлять активами и много чего другого. Также на данном этапе, больше всего внимания будет уделено психологии трейдинга и литературе.
+                        </p>
+                        <p>
+                            Уровень будет состоять из 15 различных тем и трёх модулей.
                         </p>
                     </li>
                     <li class="levels-training__list--item _tab-block _fade-in" id="levels-training-middle">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eveniet amet aliquam ratione minus? Quidem veritatis accusamus nisi totam, excepturi non enim quae dolores atque, sed debitis consequatur est nostrum.
+                            Middle Level - средний уровень знаний, пройдя который ученик уже сможет применять знания на практике и активно начинать свою торговлю. Основной этап обучения который даст студенту выбор, продолжить уже профессиональное обучения либо же остановиться на достигнутом и начать зарабатывать с достигнутыми знаниям.
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sunt cum facere? Doloribus eaque quidem delectus porro sunt fugiat amet iusto, enim animi cupiditate illum quod, eligendi temporibus ipsum? Nam!
+                            В этот уровень будет входить основная информация для трейдера и инвестора. Как анализировать рынок, как использовать различные стратегии торговли. Наша авторская стратегии торговли, и много чего другого. На данном этапе будет много практических заданий
+                        </p>
+                        <p>
+                            Уровень будет состоять из 16 различных тем и трёх модулей
                         </p>
                     </li>
                     <li class="levels-training__list--item _tab-block _fade-in" id="levels-training-pro">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid modi placeat iste cumque praesentium. Ullam libero a deserunt totam deleniti debitis quo doloremque ipsa, impedit est suscipit illum. Exercitationem?
+                            Pro Level - профессиональный уровень знаний, который даст вам углубиться максимально в сферу трейдинга. Данных этап обучения содержит в себе информацию наиболее тяжёлую для осведомления. Этот уровень не есть обязательным для всех, приступит к торговле вы сможете уже после полного прохождения Junior level и Middle level, но каждый решает сам для себя.
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur et maiores non perspiciatis unde aliquam quibusdam minima aspernatur nihil earum, vel optio esse sed eaque repellat soluta? Dignissimos, eius hic?
+                            В этот уровень будет входить информация о зональной и скальперской торговли. Также погружения в техническую часть блокчейна и сети. Изучения мостов и их применяемость.
+                        </p>
+                        <p>
+                            Уровень будет состоять из 8 различных тем и двух модулей
                         </p>
                     </li>
                 </ul>
@@ -422,10 +431,10 @@
             <div class="first-lesson__footer" data-aos="fade-up" data-aos-delay="1800" data-aos-anchor=".first-lesson__container" data-aos-anchor-placement="top-center">
                 <h2 class="first-lesson__footer--title">
                     <span class="_decor-title _right">
-                        Первый урок ты можешь попробовать пройти 
+                        Первый урок ты можешь попробовать пройти
                         <span class="_accent-color _alt">
                             Бесплатно
-                        </span>    
+                        </span>
                     </span>
                 </h2>
                 <div class="first-lesson__footer--btn-body">
@@ -454,7 +463,7 @@
                 <ul class="tariffs__block--list swiper-wrapper">
                     @@include("html-components/_tariff-item.html", {
                         "type": "_type-1",
-                        "timing": "1-2",
+                        "timing": "1-5",
 
                         "timer": '',
 
@@ -466,58 +475,66 @@
                         "list_elem_3": "Разбор и приобретение  монет на среднесрок/долгосрок",
                         "list_elem_4": "Доступ к приватному чату и каналу",
 
+                        "price": "100",
+                        "price_caption": "$/1 мес",
                         "old_price_class": "",
                         "old_price": '',
                     })
                     @@include("html-components/_tariff-item.html", {
                         "type": "_type-2",
-                        "timing": "1-2",
+                        "timing": "1-7",
                         "logo": "2",
                         "title": "Demolution Education",
 
-                        "timer": '<div class="tariffs__item--timer _timer" data-date-year="2022" data-date-month="3" data-date-day="3" data-date-hour="21" data-date-minute="0"><span class="tariffs__item--timer-day"><span class="tariffs__item--timer-value">0</span>д.</span><span class="tariffs__item--timer-hours"><span class="tariffs__item--timer-value">0</span>ч. </span><span class="tariffs__item--timer-minute"><span class="tariffs__item--timer-value">0</span>м.</span></div>',
+                        "timer": '<div class="tariffs__item--timer _timer" data-date-year="2021" data-date-month="12" data-date-day="12" data-date-hour="24" data-date-minute="00"><span class="tariffs__item--timer-day"><span class="tariffs__item--timer-value">0</span>д.</span><span class="tariffs__item--timer-hours"><span class="tariffs__item--timer-value">0</span>ч. </span><span class="tariffs__item--timer-minute"><span class="tariffs__item--timer-value">0</span>м.</span></div>',
 
                         "list_elem_1": "Доступ к обучающий платформе Demolution Education",
                         "list_elem_2": "Обучение с нуля",
                         "list_elem_3": "Прохождение тестов после каждой темы",
                         "list_elem_4": "3 этапа обучение (Junior Trader, Middle Trader, Pro Trader)",
 
+                        "price": "140",
+                        "price_caption": "$",
                         "old_price_class": "_old-price-active",
-                        "old_price": '<span class="tariffs__item--old-price"><span class="tariffs__item--old-price-value">300</span>$/мес</span>',
+                        "old_price": '<span class="tariffs__item--old-price"><span class="tariffs__item--old-price-value">200</span>$</span>',
                     })
                     @@include("html-components/_tariff-item.html", {
                         "type": "_type-3",
-                        "timing": "1-2",
+                        "timing": "1-14",
                         "logo": "3",
                         "title": "Demolution Individual",
 
-                        "timer": '<div class="tariffs__item--timer _timer" data-date-year="2022" data-date-month="2" data-date-day="15" data-date-hour="15" data-date-minute="15"><span class="tariffs__item--timer-day"><span class="tariffs__item--timer-value">0</span>д.</span><span class="tariffs__item--timer-hours"><span class="tariffs__item--timer-value">0</span>ч. </span><span class="tariffs__item--timer-minute"><span class="tariffs__item--timer-value">0</span>м.</span></div>',
+                        "timer": '<div class="tariffs__item--timer _timer" data-date-year="2021" data-date-month="12" data-date-day="12" data-date-hour="24" data-date-minute="00"><span class="tariffs__item--timer-day"><span class="tariffs__item--timer-value">0</span>д.</span><span class="tariffs__item--timer-hours"><span class="tariffs__item--timer-value">0</span>ч. </span><span class="tariffs__item--timer-minute"><span class="tariffs__item--timer-value">0</span>м.</span></div>',
 
                         "list_elem_1": "Доступ к обучающий платформе Demolution Education",
                         "list_elem_2": "Доступ к торговым сигналам Demolution Private",
                         "list_elem_3": "Построение индивидуальной торговой стратегии",
                         "list_elem_4": "Поддержка и проведение уроков в голосовом формате",
 
-                        "old_price_class": "",
-                        "old_price": '',
+                        "price": "200",
+                        "price_caption": "$",
+                        "old_price_class": "_old-price-active white",
+                        "old_price": '<span class="tariffs__item--old-price"><span class="tariffs__item--old-price-value">285</span>$</span>',
                     })
                     @@include("html-components/_tariff-item.html", {
                         "type": "_type-4",
-                        "timing": "1-2",
+                        "timing": "15-30",
                         "logo": "4",
                         "title": "ALL INCLUSIVE",
 
-                        "timer": '',
+                        "timer": '<div class="tariffs__item--timer _timer" data-date-year="2021" data-date-month="12" data-date-day="12" data-date-hour="24" data-date-minute="00"><span class="tariffs__item--timer-day"><span class="tariffs__item--timer-value">0</span>д.</span><span class="tariffs__item--timer-hours"><span class="tariffs__item--timer-value">0</span>ч. </span><span class="tariffs__item--timer-minute"><span class="tariffs__item--timer-value">0</span>м.</span></div>',
 
                         "list_elem_1": "Полный доступ Demolution Individual",
-                        "list_elem_2": "PUMP & DUMP SIGNAL",
+                        "list_elem_2": "Регулярные консультации в голосовом формате",
                         "list_elem_3": "Возможность индивидуального инвестирования",
                         "list_elem_4": "Поддержка администрации клуба 24/7",
 
+                        "price": "400",
+                        "price_caption": "$/3 мес",
                         "old_price_class": "",
-                        "old_price": '',
+                        "old_price": '<span class="tariffs__item--old-price"><span class="tariffs__item--old-price-value">580</span>$</span>',
                     })
-                    
+
                 </ul>
                 <div class="tariffs__block--nav">
                     <div class="tariffs__block--arrow slider-arrow _prev swiper-button-prev"></div>
@@ -528,7 +545,7 @@
             </div>
         </div>
     </section>
-    <section class="statistics">
+    <section class="statistics" id="signals">
         <div class="statistics__bg">
             <span class="statistics__bg--decor-hexagon _decor-alt-hexagon" data-aos="fade-in" data-aos-anchor=".statistics__anim-check" data-aos-delay="1000"></span>
             <span class="statistics__bg--decor-hexagon _decor-hexagon" data-aos="fade-in" data-aos-anchor=".statistics__anim-check" data-aos-delay="1000"></span>
@@ -558,7 +575,7 @@
                 </h2>
                 <div class="statistics__header--text _decor-alt-hexagon">
                     <p>
-                        Предоставленные данные ниже информируют о статистики сигналов из тарифа <b>Demolution Private</b>. Все данные есть достоверны и без какой либо фальсификации. Для собственного убеждение вы можете запросить любой сигнал или любую прошедшую дату подачи сигнала. 
+                        Предоставленные данные ниже информируют о статистики сигналов из тарифа <b>Demolution Private</b>. Все данные есть достоверны и без какой либо фальсификации. Для собственного убеждение вы можете запросить любой сигнал или любую прошедшую дату подачи сигнала.
                     </p>
                 </div>
             </div>
@@ -569,38 +586,38 @@
                         <span class="statistics__block--title-line _left-line"></span>
                         максимальной прибили с минимальными рисками.
                         <span class="statistics__block--title-line _right-line"></span>
-                    </b> 
+                    </b>
                 </h3>
                 <div class="statistics__block--info statistics__info" data-aos="fade-up" data-aos-delay="800">
                     <ul class="statistics__info--list">
                         @@include("html-components/_statistics-info-item.html", {
                             "icon": '1',
-                            "title": '4,000+',
-                            "text": 'Обычных сигналов',
+                            "title": '200+',
+                            "text": 'Кол-во сигналов',
                         })
                         @@include("html-components/_statistics-info-item.html", {
                             "icon": '2',
-                            "title": '3,000+',
-                            "text": 'Pro сигналов',
+                            "title": '32',
+                            "text": 'Кол-во убыточных',
                         })
                         @@include("html-components/_statistics-info-item.html", {
                             "icon": '3',
-                            "title": '1,000+',
-                            "text": 'Pump/domp',
+                            "title": '13',
+                            "text": 'Кол-во N/A сигналов',
                         })
                         @@include("html-components/_statistics-info-item.html", {
                             "icon": '4',
-                            "title": '85,00% +',
+                            "title": '86,2% +',
                             "text": 'Проходимость',
                         })
                         @@include("html-components/_statistics-info-item.html", {
                             "icon": '5',
-                            "title": '35,00% +',
+                            "title": '333% / мес. ',
                             "text": 'Средний доход',
                         })
                         @@include("html-components/_statistics-info-item.html", {
                             "icon": '6',
-                            "title": '200,000% +',
+                            "title": '2000% +',
                             "text": 'Дохода получено',
                         })
                     </ul>
@@ -611,11 +628,7 @@
                 <div class="statistics__block--chart statistics__chart" data-aos="fade-up" data-aos-delay="1200">
                     <ul class="statistics__chart--list" id="legend-list"></ul>
                     <div class="statistics__chart--element" style="background-image: url(img/statistics/bg.png);">
-                        <canvas class="statistics__chart--element-canvas _chart-element" id="btc-chart" width="220" height="210"
-                        data-chart-min="3000, 2900, 3100, 3050, 3200, 3150, 3250, 3125, 3300, 3350, 3450, 3400"
-                        data-chart-max="3200, 3100, 3400, 3250, 3450, 3550, 3350, 3200, 3500, 3650, 3470, 3500"
-                        data-chart-labels="Ноябрь, Декабрь, Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь"
-                        ></canvas>
+                        <canvas class="statistics__chart--element-canvas _chart-element" id="btc-chart" width="220" height="210"></canvas>
                     </div>
                 </div>
             </div>

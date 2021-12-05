@@ -28,9 +28,9 @@
 @font-face {
     @include font-include('MazzardM', 600, swap, normal, 'MazzardM-SemiBold');
 }
-@font-face {
-  @include font-include('Montserrat', 400, swap, normal, 'Montserrat-Regular');
-}
+//@font-face {
+//  @include font-include('Montserrat', 400, swap, normal, 'Montserrat-Regular');
+//}
 
 @font-face {
     font-family: 'demolution-icons';
@@ -42,9 +42,9 @@
     font-style: normal;
     font-display: block;
   }
-  
+
   [class^="_icon-"], [class*=" _icon-"] {
-    
+
     font-family: 'demolution-icons' !important;
     speak: never;
     font-style: normal;
@@ -52,12 +52,12 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-  
+
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   ._icon-to-down-arrow::before {
     content: "\e904";
   }
@@ -88,8 +88,8 @@
     @include _992 {
         font-size: 6rem;
     }
-    
-    
+
+
     & ._decor-title::before {
 
         position: relative;
@@ -103,7 +103,7 @@
 
             transform: translate(-25px,30%);
             margin-right: -100px; margin-top: -100px;
-            
+
         }
         @include _992 {
             width: 150px; height: 150px;
@@ -111,7 +111,7 @@
             margin-right: -175px; margin-top: -100px;
             transform: translate(-45px,30%);
         }
-        
+
     }
 }
 
@@ -136,7 +136,7 @@
 }
 
 ._title {
-    
+
     font-family: var(--main-font);
     font-weight: 700;
     font-size: 1.6875rem;
@@ -150,7 +150,7 @@
         font-size: 3.5rem;
     }
 
-    
+
     & ._decor-title::before {
         width: 47px; height: 47px;
         margin: -47px -47px -15px 0;
@@ -160,7 +160,7 @@
             width: 80px; height: 80px;
             margin: -80px -90px -25px 0;
             transform: translate(-25%,0%);
- 
+
         }
         @include _992 {
             width: 105px; height: 105px;
@@ -168,7 +168,7 @@
             transform: translate(-50%,0%);
 
         }
-        
+
     }
 
     & ._decor-title._right::after {
@@ -180,7 +180,7 @@
             width: 80px; height: 80px;
             margin: -80px 0 -25px -90px;
             transform: translate(25%,0%);
- 
+
         }
         @include _992 {
             width: 105px; height: 105px;
@@ -188,22 +188,22 @@
             transform: translate(50%,0%);
 
         }
-        
+
     }
     &._min {
         font-size: 1rem;
         font-weight: 800;
         @include _769 {
             font-size: 1.25rem;
-            
+
         }
         @include _992 {
             font-size: 1.625rem;
             font-weight: 700;
         }
-        
+
         line-height: 135%;
-        
+
         & ._decor-title::before {
             width: 40px; height: 40px;
             transform: translate(-5%,0%);
@@ -217,7 +217,7 @@
                 width: 60px; height: 60px;
                 margin: -60px -75px 0 0;
             }
-            
+
         }
         & ._decor-title._right::after {
             width: 40px; height: 40px;
@@ -232,9 +232,9 @@
                 width: 55px; height: 55px;
                 margin: -550px 0 0 -60px;
             }
-            
+
         }
-        
+
     }
 
     &._subtitle-type {
@@ -245,7 +245,7 @@
         font-weight: 600;
         line-height: 132%;
         text-transform: none;
-        
+
     }
 }
 

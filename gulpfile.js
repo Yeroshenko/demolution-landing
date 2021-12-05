@@ -1,5 +1,3 @@
-// npm i gulp
-// npm i --dev
 const { src, dest, watch, parallel, series } = require('gulp');
 
 const scss         = require('gulp-sass'),
@@ -147,7 +145,7 @@ function CSSlibBuild() {
         'node_modules/normalize.css/normalize.css',
         'node_modules/swiper/swiper-bundle.min.css', // Слайдер
         'node_modules/aos/dist/aos.css', // Анимации
-        
+
     ])
     .pipe(concat('_libs.scss'))
     .pipe(dest('app/scss'))

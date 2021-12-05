@@ -1,6 +1,152 @@
+const X_LABELS = [
+    'Апрель',
+    'Май',
+    'Июнь',
+    'Июль',
+    'Август',
+    'Сентябрь',
+    'Октябрь',
+]
+
+const Y_MIN = [
+    272,
+    -137,
+    35,
+    17,
+    333,
+    280,
+    300
+]
+
+const Y_MAX = [
+    417,
+    -137,
+    35,
+    14,
+    658,
+    481,
+    485,
+]
+
+// const Y_MEAN = [
+//     345,
+//     -137,
+//     35,
+//     16,
+//     496,
+//     381,
+//     393,
+// ]
+
 export default function chart() {
-    const ctx = document.querySelectorAll('._chart-element'),
+    const chartElem = document.querySelector('._chart-element'),
         legendList = document.getElementById('legend-list');
+
+    chartElem.font = "semibold 30px 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+    const chart = new Chart(chartElem.getContext('2d'), {
+        type: 'line',
+        data: {
+            labels: X_LABELS,
+            datasets: [
+                {
+                    label: 'Минимальный процент дохода',
+                    data: Y_MIN,
+                    backgroundColor: [
+                        'rgba(24, 120, 198, 0.3)'
+                    ],
+                    borderColor: [
+                        'rgba(24, 120, 198, 1)'
+                    ],
+                    pointRadius: 1,
+                    borderWidth: 3,
+                    cubicInterpolationMode: 'monotone',
+                    tension: 0.4
+                },
+                // {
+                //     label: 'Средний процент дохода',
+                //     data: Y_MEAN,
+                //     backgroundColor: [
+                //         'rgba(24, 187, 198, 0.3)'
+                //     ],
+                //     borderColor: [
+                //         'rgba(24, 187, 198, 1)'
+                //     ],
+                //     pointRadius: 1,
+                //     borderWidth: 2,
+                //
+                //     cubicInterpolationMode: 'monotone',
+                //     tension: 0.4
+                // },
+                {
+                    label: 'Максимальный процент дохода',
+                    data: Y_MAX,
+                    backgroundColor: [
+                        'rgba(91, 239, 203, 0.3)'
+                    ],
+                    borderColor: [
+                        'rgba(91, 239, 203, 1)'
+                    ],
+                    pointRadius: 1,
+                    borderWidth: 2,
+
+                    cubicInterpolationMode: 'monotone',
+                    tension: 0.4
+                },
+            ]
+        },
+        options: {
+            scaleLineColor: "rgba(0,0,0,0)",
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false,
+                    font: {
+                        size: 11
+                    }
+                },
+            },
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
+
+            scales: {
+                y: {
+                    ticks: {
+                        color: "#999999",
+                        font: {
+                            family: "'MazzardM', sans-serif",
+                            padding: 0,
+                            labelOffset: 50,
+                            lineHeight: 1.5
+                        }
+                    },
+
+                    grid: {
+                        display: false,
+                        borderWidth: 0,
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: "#999999",
+                        font: {
+                            family: "'MazzardM', sans-serif",
+                            size: 11,
+                            padding: {
+                                left: 50,
+                            },
+                        }
+                    },
+                    grid: {
+                        display: false,
+                        borderWidth: 0,
+                    }
+                },
+            }
+        }
+    })
+
 
     function sampleLegeng(arg) {
 
@@ -65,127 +211,28 @@ export default function chart() {
         return liLegend;
     }
 
-    ctx.font = "semibold 30px 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
-    ctx.forEach(chartElem => {
-        const chart = new Chart(chartElem.getContext('2d'), {
-            type: 'line',
-            data: {
-                labels: chartElem.dataset.chartLabels.split(','),
-                datasets: [
-                    {
-                        label: 'Минимальный процент дохода',
-                        data: chartElem.dataset.chartMin.split(','),
-                        backgroundColor: [
-                            'rgba(24, 120, 198, 0.3)'
-                        ],
-                        borderColor: [
-                            'rgba(24, 120, 198, 1)'
-                        ],
-                        pointRadius: 0,
-                        borderWidth: 3,
 
-                        cubicInterpolationMode: 'monotone',
-                        tension: 0.4
-                    },
-                    {
-                        label: 'Максимальный процент дохода',
-                        data: chartElem.dataset.chartMax.split(','),
-                        backgroundColor: [
-                            'rgba(91, 239, 203, 0.3)'
-                        ],
-                        borderColor: [
-                            'rgba(91, 239, 203, 1)'
-                        ],
-                        pointRadius: 0,
-                        borderWidth: 2,
+    //console.log(chart.defaults.color);
+    legendList.appendChild(sampleLegeng({
+        label: 'Все доходы',
+        id: false,
+        active: '_active',
+        chart: chart,
+    }));
 
-                        cubicInterpolationMode: 'monotone',
-                        tension: 0.4
-                    }
-                ]
-            },
-            options: {
-
-                scaleLineColor: "rgba(0,0,0,0)",
-                responsive: true,
-                plugins: {
-                    legend: {
-                        display: false,
-                        font: {
-                            size: 11
-                        }
-                    },
-                },
-                interaction: {
-                    intersect: false,
-                    mode: 'index',
-                },
-
-                scales: {
-                    y: {
-                        suggestedMin: 2000,
-                        suggestedMax: 6500,
-                        
-                        ticks: {
-                            color: "#999999",
-                            font: {
-                                family: "'Montserrat', sans-serif",
-                                padding: 0,
-                                labelOffset: 50,
-                                lineHeight: 1.5
-                            }
-                        },
-
-                        grid: {
-                            display: false,
-                            borderWidth: 0,
-                        }
-                    },
-                    x: {
-                        ticks: {
-                            color: "#999999",
-                            font: {
-                                family: "'Montserrat', sans-serif",
-                                //size: 11,
-                                padding: {
-                                    left: 50,
-                                },
-                            }
-                        },
-                        grid: {
-                            display: false,
-                            borderWidth: 0,
-                        }
-                    },
+    let count = chart.config.data.datasets.length - 1;
 
 
-                }
+    chart.config.data.datasets.forEach(elem => {
 
-            }
-
-        });
-        //console.log(chart.defaults.color);
         legendList.appendChild(sampleLegeng({
-            label: 'Все доходы',
-            id: false,
-            active: '_active',
+            label: elem.label,
+            id: count,
             chart: chart,
         }));
 
-        let count = chart.config.data.datasets.length - 1;
+        count--;
 
+    })
 
-        chart.config.data.datasets.forEach(elem => {
-
-            legendList.appendChild(sampleLegeng({
-                label: elem.label,
-                id: count,
-                chart: chart,
-            }));
-
-            count--;
-
-        })
-
-    });
 }
