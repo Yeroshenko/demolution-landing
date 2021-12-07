@@ -202,7 +202,6 @@ exports.scriptsMin = scriptsMin;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.CSSlibBuild = CSSlibBuild;
-exports.ttf2woffConvert = ttf2woffConvert;
 exports.ttf2woff2Convert = ttf2woff2Convert;
 exports.webpConvert = webpConvert;
 exports.fonts = fonts;

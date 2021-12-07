@@ -301,11 +301,9 @@
         margin-top: -25px;
         margin-bottom: -95px;
 
-
         @include _426 {
             margin-top: -50px;
             margin-bottom: -100px;
-            display: none;
         }
         @include _769 {
             position: absolute;
@@ -337,10 +335,24 @@
         &--block {
             width: 100%;
             margin-bottom: -75px;
+            display: none;
+
+            &.is-image {
+                display: block;
+                margin: 0 auto 60px;
+                width: 100%;
+            }
+
 
             @include _769 {
                 width: 370px;
                 margin-bottom: 0;
+
+                display: block;
+
+                &.is-image {
+                    display: none;
+                }
             }
             @include _992 {
                 width: 500px;
