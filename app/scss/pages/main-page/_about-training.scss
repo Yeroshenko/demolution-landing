@@ -4,9 +4,9 @@
     position: relative;
     z-index: 15;
 
-    
+
     padding-bottom: 100px;
-    
+
     @include _769 {
         padding-bottom: 150px;
     }
@@ -16,7 +16,7 @@
     @media(min-width: 1600px) {
         padding-bottom: 10%;
     }
-    
+
     &__decor {
         position: absolute;
         left: 0; top: 0;
@@ -76,11 +76,11 @@
             width: 35px; height: 35px;
             transform: translate(25%,-25%);
         }
-        
+
         flex: 1 1 100%;
         padding: 20px;
         @include _769 {
-            padding: 30px 45px;
+            padding: 30px 40px;
             flex: 0 1 calc(55% - 15px);
 
             &::before {
@@ -90,16 +90,16 @@
         @media(min-width: #{$container}px) {
             flex: 0 1 60%;
         }
-        
+
         font-weight: 500;
         line-height: 158%;
-        
+
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
         border-radius: 15px;
 
         @include _992 {
             font-size: 1.375rem;
-            padding: 30px 45px;
+            padding: 30px 40px;
         }
     }
     &__article {
@@ -131,15 +131,15 @@
                 position: absolute;
                 left: 0; top: 140px;
                 width: 105%; height: 1px;
-    
+
                 border-top: var(--border-width) dashed var(--accent);
-    
+
                 &::before {
                     content: '';
                     position: absolute;
                     right: calc(100% - 2px); top: -1px;
                     width: 100vw; height: 0px;
-                    
+
                     border-top: var(--border-width) dashed var(--accent);
                 }
                 &::after {
@@ -148,13 +148,13 @@
                     left: 100%; top: 0;
                     transform: translate(0,-100%);
                     height: 200px; width: 100vw;
-                    
+
                     border-left: var(--border-width) dashed var(--accent);
                     border-top: var(--border-width) dashed var(--accent);
                 }
-            }    
+            }
         }
-        
+
     }
     &__list {
         position: relative;
@@ -162,7 +162,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        
+
         padding-top: 30px;
 
         margin: -11px 0;
@@ -171,9 +171,9 @@
             padding-top: 50px;
         }
 
-        
+
         &--item {
-            
+
             margin: 0;
             flex: 1 1 100%;
             padding: 11px 0px;
@@ -182,7 +182,7 @@
             @include _769 {
                 &::before, &::after {
                     display: none;
-                }   
+                }
             }
             &::before {
                 content: '';
@@ -204,7 +204,7 @@
                 z-index: -1;
             }
             @include _769 {
-                flex: 0 1 25.16%;
+                flex: 0 1 26%;
                 margin: 10px;
             }
 
@@ -212,7 +212,7 @@
             align-items: center;
             flex-direction: column;
 
-            
+
             &:nth-child(odd) {
                 &::before {
                     border-left: 0;
@@ -230,9 +230,9 @@
                     left: auto;
                     right: 5px;
                 }
-                
+
             }
-            
+
             &:nth-child(2)::after {
                 border-left: 0;
                 border-bottom: 0;
@@ -264,19 +264,19 @@
                     border-bottom: 0;
                 }
             }
-            
+
             &-icon {
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
                 width: 105px; height: 105px;
-                
+
                 @include _769 {
                     width: 143px; height: 138px;
-                    
+
                 }
-                
+
                 position: relative;
                 z-index: 100;
                 &::after {
@@ -298,7 +298,7 @@
                     z-index: -1;
                 }
             }
-            
+
             &-img {
                 width: 35%;
                 @include _769 {

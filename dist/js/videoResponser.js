@@ -1,7 +1,6 @@
 export default class VideoResponser {
     constructor(selector) {
         const $video = document.querySelector(selector);
-        console.log($video.getAttribute('data-src'))
         this.options = {
             selector,
             breakpoints: { default: { src: $video.getAttribute('data-src') } }
@@ -36,7 +35,6 @@ export default class VideoResponser {
         if (widthNow && widthNow == nowBreakpoint) return; // check if the video needs to be changed
 
         $video.setAttribute('data-width-now', nowBreakpoint);
-        console.log({ breakpoints, nowBreakpoint }, breakpoints[nowBreakpoint].src)
         $video.src = breakpoints[nowBreakpoint].src;
     }
 }
