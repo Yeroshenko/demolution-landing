@@ -463,18 +463,20 @@
         &--old-price {
             flex: 0 0 40%;
             display: inline-block;
-
             text-align: center;
-
             font-weight: 500;
             font-size: 1rem;
+
+
             @include _769 {
                 font-size: 1.25rem;
                 white-space: nowrap;
             }
+
             @media(min-width: 1500px) {
                 font-size: 1.75rem;
             }
+
             @media(min-width: #{$container}px) {
                 font-size: 1.35rem;
                 text-align: left;
@@ -482,7 +484,8 @@
                 left: 45px;
 
             }
-            color: #051A3A;
+            color: var(--white);
+            opacity: 0.7;
             text-decoration: line-through;
         }
         &--price {
