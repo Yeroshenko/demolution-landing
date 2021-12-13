@@ -1628,7 +1628,7 @@
   background: linear-gradient(197.97deg, #040114 -25.83%, #080435 -7.91%, #130F3D 12.04%, #221E48 82.1%, #000000 118.73%);
   -webkit-box-shadow: 0;
           box-shadow: 0;
-  max-width: 280px;
+  max-width: 320px;
   border-radius: 15px;
   color: var(--white);
   position: relative;
@@ -2973,7 +2973,7 @@
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
   /*  &--link {
-            
+
         } */
 }
 
