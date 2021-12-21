@@ -320,14 +320,12 @@
 
             aspect-ratio: 1/1.05;
             min-height: auto;
-
         }
 
         @include _992 {
             right: -20%;
         }
 
-        background-color: var(--accent-dark);
         @media(min-width: #{$container}px) {
             position: absolute;
             right: -30%; top: -50%;
@@ -335,24 +333,9 @@
         &--block {
             width: 100%;
             margin-bottom: -75px;
-            display: none;
-
-            &.is-image {
-                display: block;
-                margin: 0 auto 60px;
-                width: 100%;
-            }
-
-
             @include _769 {
                 width: 370px;
                 margin-bottom: 0;
-
-                display: block;
-
-                &.is-image {
-                    display: none;
-                }
             }
             @include _992 {
                 width: 500px;
