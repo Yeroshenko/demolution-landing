@@ -189,11 +189,15 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener("resize", debounce(resize, 150));
 
 
-    headerToggle({
-        header: header,
-    });
+    headerToggle({ header });
 
     new VideoResponser('#intro-video')
+
+    // Autoplay video IPhone low power mode not working (
+    const mainVideoElem = document.getElementById('intro-video');
+
+    mainVideoElem.play().then(() => {}).catch((error) => {
+    });
 });
 
 
