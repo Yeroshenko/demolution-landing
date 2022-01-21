@@ -4,7 +4,7 @@
     background: linear-gradient(219.43deg, #040114 24.07%, #080435 39.3%, #130F3D 79.8%, #000000 146.93%);
 
     padding: 75px 0 0 0;
-    
+
     overflow: hidden;
 
     position: relative;
@@ -13,10 +13,38 @@
         content: '';
         position: absolute;
         left: -100%; bottom: 95%;
-        
+
         width: 300vw; height: 100vw;
         background-color: var(--white);
         border-radius: 50%;
+    }
+
+    &--without-social {
+        .footer__btn {
+          @include _769 {
+              grid-column: 1/1;
+              grid-row: 1/2;
+              margin-top: 60px;
+          }
+        }
+
+        .footer__nav--item {
+            @include _769 {
+                grid-row: 1/4;
+                justify-self: auto;
+
+                //grid-column: 1/1;
+                //grid-row: 1/2;
+                //margin-top: 60px;
+            }
+        }
+
+        .footer__logo {
+            @include _769 {
+                flex-direction: column;
+                flex: 0 1 22.5%;
+            }
+        }
     }
 
     &__bg {
@@ -43,7 +71,7 @@
                 @include _992 {
                     left: 130px; top: 0;
                 }
-                
+
             }
             &._decor-item-3 {
                 z-index: 1;
@@ -55,7 +83,7 @@
                     transform: translate(-60%,0) rotate(25deg);
                     opacity: .15;
                     width: 150px; height: 150px;
-                    
+
                 }
             }
             &._decor-item-4 {
@@ -77,7 +105,7 @@
                 }
             }
             &._decor-item-5 {
-                
+
                 width: 150px; height: 150px;
                 z-index: 1;
                 bottom: 50%; right: 100%;
@@ -105,7 +133,7 @@
 
     color: var(--white);
 
-    
+
     &__nav {
         padding: 0 20px 44px 20px;
         @include _769 {
@@ -118,7 +146,10 @@
             justify-content: space-between;
             grid-template-columns: 100%;
 
-            
+
+            @include _426 {
+                grid-template-columns: auto;
+            }
             @include _769 {
                 gap: 40px 0;
                 grid-template-columns: auto;
@@ -126,14 +157,14 @@
             @media(min-width: #{$container}px) {
                 gap: 20px 0;
             }
-            
+
 
             /* display: flex;
             justify-content: space-between;
             flex-wrap: wrap; */
         }
         &--item {
-            
+
             @include _769 {
                 grid-row: 2;
                 justify-self: stretch;
@@ -171,31 +202,31 @@
                 @include _769 {
                     margin: 15px 0;
                 }
-                
+
             }
         }
         &--link {
             color: var(--white);
             display: inline-block;
-            
+
         }
     }
     &__logo {
         display: flex;
         flex-direction: row;
         align-items: center;
-        
+
         padding-bottom: 15px;
-        
+
 
         @include _769 {
             grid-column: 1/1;
             grid-row: 1/2;
-            
+
         }
         /* grid-column: end;
         grid-row: 1/1; */
-        
+
         flex: 1 1 100%;
         @include _992 {
             flex-direction: column;
@@ -203,18 +234,17 @@
         }
 
        /*  &--link {
-            
+
         } */
 
     }
     &__btn {
         width: 100%;
-        
+
         @include _769 {
             grid-column: 2/2;
             grid-row: 1/1;
             width: auto;
-            
         }
 
         /* @include _992 {
@@ -231,7 +261,7 @@
             @include _769 {
                 width: auto;
             }
-            
+
         }
         text-align: center;
     }
@@ -299,7 +329,7 @@
         &::before {
             opacity: 1;
         }
-        
+
     }
 
     & > svg {

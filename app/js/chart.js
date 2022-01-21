@@ -42,6 +42,8 @@ export default function chart() {
     const chartElem = document.querySelector('._chart-element'),
         legendList = document.getElementById('legend-list');
 
+    if (!chartElem) return;
+
     chartElem.font = "semibold 30px 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
     const chart = new Chart(chartElem.getContext('2d'), {
         type: 'line',
