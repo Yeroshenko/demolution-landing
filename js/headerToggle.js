@@ -1,5 +1,4 @@
 export default function headerToggle(arg) {
-
     function getCoords(elem) {
         const box = elem.getBoundingClientRect();
 

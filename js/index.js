@@ -159,6 +159,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function resize() {
+        if (!appendBlock || !headerNavBody || !headerNavBlockBody) return;
+
         windowSize = window.innerWidth;
 
         resizeCheckFunc(768,
@@ -189,7 +191,9 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener("resize", debounce(resize, 150));
 
 
-    headerToggle({ header });
+    if (header) {
+        headerToggle({ header });
+    }
 
     new VideoResponser('#intro-video')
 
