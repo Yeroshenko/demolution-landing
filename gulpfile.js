@@ -1,20 +1,20 @@
 const { src, dest, watch, parallel, series } = require('gulp');
 
-const scss         = require('gulp-sass'),
-      concat       = require('gulp-concat'),
-      browserSync  = require('browser-sync').create(),
-      uglify       = require('gulp-uglify-es').default,
-      autoprefixer = require('gulp-autoprefixer'),
-      imagemin     = require('gulp-imagemin'),
-      del          = require('del'),
-      webp         = require('gulp-webp'),
-      webpHTML     = require('gulp-webp-html'),
-      include      = require('gulp-file-include'),
-      minCSS       = require('gulp-cssmin'),
-      mediaGroup   = require('gulp-group-css-media-queries'),
-      purgecss     = require('gulp-purgecss'),
-      ttf2woff     = require('gulp-ttf2woff'),
-      ttf2woff2    = require('gulp-ttf2woff2');
+const scss = require('gulp-sass'),
+    concat = require('gulp-concat'),
+    browserSync = require('browser-sync').create(),
+    uglify = require('gulp-uglify-es').default,
+    autoprefixer = require('gulp-autoprefixer'),
+    imagemin = require('gulp-imagemin'),
+    del = require('del'),
+    webp = require('gulp-webp'),
+    webpHTML = require('gulp-webp-html'),
+    include = require('gulp-file-include'),
+    minCSS = require('gulp-cssmin'),
+    mediaGroup = require('gulp-group-css-media-queries'),
+    purgecss = require('gulp-purgecss'),
+    ttf2woff = require('gulp-ttf2woff'),
+    ttf2woff2 = require('gulp-ttf2woff2');
 
 function browsersync() {
     browserSync.init({
@@ -32,18 +32,18 @@ function cleanDist() {
 
 function images() {
     return src('app/img/**/*')
-    .pipe(imagemin([
-        imagemin.gifsicle({interlaced: true}),
-        imagemin.mozjpeg({quality: 90, progressive: true}),
-        imagemin.optipng({optimizationLevel: 5}),
-        imagemin.svgo({
-            plugins: [
-                {removeViewBox: false},
-                {cleanupIDs: false}
-            ]
-        })
-    ]))
-    .pipe(dest('dist/img'))
+        .pipe(imagemin([
+            imagemin.gifsicle({ interlaced: true }),
+            imagemin.mozjpeg({ quality: 90, progressive: true }),
+            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: false },
+                    { cleanupIDs: false }
+                ]
+            })
+        ]))
+        .pipe(dest('dist/img'))
 }
 
 function cleanWebp() {
@@ -52,21 +52,21 @@ function cleanWebp() {
 
 function webpConvert() {
     return src('app/img/**/*', '!app/img/favicon/**/*.*')
-    .pipe(webp({quality: 60}))
-    .pipe(dest('app/img'))
+        .pipe(webp({ quality: 60 }))
+        .pipe(dest('app/img'))
 }
 
 function scripts() {
     return src('app/js/*.js')
-    .pipe(dest('dist/js'))
-    .pipe(browserSync.stream())
+        .pipe(dest('dist/js'))
+        .pipe(browserSync.stream())
 }
 
 function scriptsMin() {
     return src('app/js/main.js')
-    .pipe(concat('main.min.js'))
-    .pipe(dest('dist/js'))
-    .pipe(browserSync.stream())
+        .pipe(concat('main.min.js'))
+        .pipe(dest('dist/js'))
+        .pipe(browserSync.stream())
 }
 
 function scriptsLib() {
@@ -78,23 +78,23 @@ function scriptsLib() {
         'node_modules/smoothscroll-polyfill/dist/smoothscroll.min.js', // Полифил для скрола
 
     ])
-    .pipe(concat('libs.min.js'))
-    .pipe(uglify())
-    .pipe(dest('dist/js'))
-    .pipe(browserSync.stream())
+        .pipe(concat('libs.min.js'))
+        .pipe(uglify())
+        .pipe(dest('dist/js'))
+        .pipe(browserSync.stream())
 }
 
 function htmlCompilation() {
     return src(['app/*.html'])
-    .pipe(include())
-    .pipe(dest('dist'))
-    .pipe(browserSync.stream())
+        .pipe(include())
+        .pipe(dest('dist'))
+        .pipe(browserSync.stream())
 }
 
 function htmlComponents() {
     return src('app/html-components/_*.html')
-    .pipe(include())
-    .pipe(htmlCompilation())
+        .pipe(include())
+        .pipe(htmlCompilation())
 }
 
 function htmlDel() {
@@ -103,7 +103,7 @@ function htmlDel() {
 
 function styles() {
     return src('app/scss/style.scss')
-        .pipe(scss({outputStyle: 'compressed'}))
+        .pipe(scss({ outputStyle: 'compressed' }))
         .pipe(mediaGroup())
         .pipe(minCSS())
         .pipe(concat('style.min.css'))
@@ -117,7 +117,7 @@ function styles() {
 
 function stylesIntro() {
     return src('app/scss/style-intro.scss')
-        .pipe(scss({outputStyle: 'compressed'}))
+        .pipe(scss({ outputStyle: 'compressed' }))
         .pipe(mediaGroup())
         .pipe(minCSS())
         .pipe(concat('style-intro.min.css'))
@@ -140,6 +140,7 @@ function stylesAlt() {
         }))
         .pipe(dest('dist/css'))
 }
+
 function CSSlibBuild() {
     return src([
         'node_modules/normalize.css/normalize.css',
@@ -147,8 +148,8 @@ function CSSlibBuild() {
         'node_modules/aos/dist/aos.css', // Анимации
 
     ])
-    .pipe(concat('_libs.scss'))
-    .pipe(dest('app/scss'))
+        .pipe(concat('_libs.scss'))
+        .pipe(dest('app/scss'))
 }
 
 function ttf2woffConvert() {
