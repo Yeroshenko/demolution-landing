@@ -23,7 +23,7 @@
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-imagemin": "^7.1.0",
     "gulp-purgecss": "^4.0.3",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.1.0",
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^3.0.0",
     "gulp-uglify-es": "^2.0.0",
@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "gulp-purify-css": "^0.1.0",
-    "gulp-purifycss": "^0.2.0"
+    "gulp-purifycss": "^0.2.0",
+    "sass": "^1.49.9"
   }
 }
