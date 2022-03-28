@@ -20,9 +20,9 @@ export function tariffSlider() {
 
             },
             768: {
-                centeredSlides: true,
-                spaceBetween: 15,
-                slidesPerView: 3,
+                centeredSlides: false,
+                spaceBetween: 30,
+                slidesPerView: 2,
 
             }
         }
