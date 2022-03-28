@@ -16,7 +16,7 @@ export default function timer() {
       const day = timerElem.querySelector('.tariffs__item--timer-day .tariffs__item--timer-value'),
         hour = timerElem.querySelector('.tariffs__item--timer-hours .tariffs__item--timer-value'),
         minute = timerElem.querySelector('.tariffs__item--timer-minute .tariffs__item--timer-value'),
-        second = timerElem.querySelector('.tariffs__item--timer-seconds .tariffs__item--timer-value');
+        second = timerElem.querySelector('.tariffs__item--timer-second .tariffs__item--timer-value');
 
       const diff = deadline - new Date(),
         days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0,
@@ -27,7 +27,7 @@ export default function timer() {
         day.innerHTML = days.toString();
         hour.innerHTML = hours.toString();
         minute.innerHTML = minutes.toString();
-        second.innerHTML = seconds.toString();
+        //second.innerHTML = seconds.toString();
 
     });
 }
