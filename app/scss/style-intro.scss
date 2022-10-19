@@ -1,0 +1,71 @@
+@import 'mixin.scss';
+@import 'null.scss';
+//@import 'libs.scss';
+:root {
+    --container: 1180px;
+    --container-large: 1680px;
+
+    --accent: #456AE7;
+    --accent-alt: #864DFF;
+    --accent-dark: #040114;
+    --accent-text: #0D2A6B;
+    --white: #FFF;
+
+    
+
+    --accent-gradient-dark: linear-gradient(180deg, #040114 0%, #07032B 100%);
+    --accent-gradient: linear-gradient(219.43deg, #040114 24.07%, #080435 39.3%, #130F3D 79.8%, #000000 146.93%);
+    --accent-gradient-decor: linear-gradient(135.01deg, #7DC6FD 14.02%, #548EF7 35.6%, #A728DA 85.24%);
+    --accent-gradient-btn: linear-gradient(122.93deg, #7345D3 -137.34%, #5470F0 38.32%, #1858CD 129.02%);
+    --accent-gradient-text: linear-gradient(334.28deg, #4E9CDB -27.94%, #5761D7 -5.93%);
+
+    --border-width: 1px;
+
+
+    --main-font: 'MazzardM';
+}
+@import 'vars.scss';
+@import 'global.scss';
+@import 'font-styles';
+@import 'popup.scss';
+//@import 'animate.scss';
+
+@import 'main-sections/header';
+
+._decor-title {
+    
+    position: relative;
+    z-index: 2;
+
+    display: inline;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+
+        z-index: -1;
+        background: url("data:image/svg+xml,%3Csvg width='49' height='41' viewBox='0 0 49 41' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36.2169 1H12.7169L1 20.5L12.7169 40H36.2169L48 20.5L36.2169 1Z' stroke='url(%23paint0_linear_268_1871)' stroke-width='0.8621' stroke-miterlimit='10'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_268_1871' x1='0.667293' y1='20.4977' x2='48.3066' y2='20.4977' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23A728DA'/%3E%3Cstop offset='0.697' stop-color='%23548EF7'/%3E%3Cstop offset='1' stop-color='%237DC6FD'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
+        center center / contain no-repeat;
+    }
+
+    &._right {
+        &::before {
+            display: none;
+        }
+        &::after {
+            content: '';
+            display: inline-block;
+            position: relative;
+
+            z-index: -1;
+            background: url("data:image/svg+xml,%3Csvg width='49' height='41' viewBox='0 0 49 41' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36.2169 1H12.7169L1 20.5L12.7169 40H36.2169L48 20.5L36.2169 1Z' stroke='url(%23paint0_linear_268_1871)' stroke-width='0.8621' stroke-miterlimit='10'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_268_1871' x1='0.667293' y1='20.4977' x2='48.3066' y2='20.4977' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23A728DA'/%3E%3Cstop offset='0.697' stop-color='%23548EF7'/%3E%3Cstop offset='1' stop-color='%237DC6FD'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
+            center center / contain no-repeat;
+        }
+    }
+    
+
+}
+
+@import 'pages/main-page/intro';
+

@@ -1,0 +1,347 @@
+.about-training {
+    padding-top: 0;
+
+    position: relative;
+    z-index: 15;
+
+
+    padding-bottom: 100px;
+
+    @include _769 {
+        padding-bottom: 150px;
+    }
+    @include _992 {
+        padding-bottom: 20%;
+    }
+    @media(min-width: 1600px) {
+        padding-bottom: 10%;
+    }
+
+    &__decor {
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+        &--item {
+            position: absolute;
+            z-index: -1;
+            user-select: none;
+            &._desktop-decor-item {
+                display: none;
+                @include _992 {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        flex: 1 1 100%;
+        text-align: center;
+        padding-bottom: 20px;
+        @include _769 {
+            text-align: left;
+            flex: 0 1 calc(37% + 3px);
+            padding-bottom: 0px;
+        }
+        /* & ._decor-title {
+            &::before {
+                display: inherit;
+                @include _769 {
+                    display: none;
+                }
+                @include _992 {
+                    display: inline-block;
+                }
+            }
+            &::after {
+                display: none;
+                @include _769 {
+                    display: inline-block
+                }
+                @include _992 {
+                    display: none;
+                }
+            }
+        } */
+    }
+    &__text {
+        &::before {
+            right: 0; top: 0;
+            width: 35px; height: 35px;
+            transform: translate(25%,-25%);
+        }
+
+        flex: 1 1 100%;
+        padding: 20px;
+        @include _769 {
+            padding: 30px 40px;
+            flex: 0 1 calc(55% - 15px);
+
+            &::before {
+                display: none;
+            }
+        }
+        @media(min-width: #{$container}px) {
+            flex: 0 1 60%;
+        }
+
+        font-weight: 500;
+        line-height: 158%;
+
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+        border-radius: 15px;
+
+        @include _992 {
+            font-size: 1.375rem;
+            padding: 30px 40px;
+        }
+    }
+    &__article {
+        flex: 1 1 100%;
+        position: relative;
+        @include _769 {
+            padding-top: 30px;
+        }
+        &--title {
+            padding-top: 20px;
+            @include _769 {
+                padding-top: 30px;
+            }
+
+            font-size: 1.125rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+
+            @include _992 {
+                font-size: 2rem;
+            }
+            @include _769 {
+                font-size: 1.5rem;
+            }
+        }
+        @include _769 {
+            &--line {
+                position: absolute;
+                left: 0; top: 140px;
+                width: 105%; height: 1px;
+
+                border-top: var(--border-width) dashed var(--accent);
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    right: calc(100% - 2px); top: -1px;
+                    width: 100vw; height: 0px;
+
+                    border-top: var(--border-width) dashed var(--accent);
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 100%; top: 0;
+                    transform: translate(0,-100%);
+                    height: 200px; width: 100vw;
+
+                    border-left: var(--border-width) dashed var(--accent);
+                    border-top: var(--border-width) dashed var(--accent);
+                }
+            }
+        }
+
+    }
+    &__list {
+        position: relative;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        padding-top: 30px;
+
+        margin: -11px 0;
+        @include _769 {
+            margin: -10px;
+            padding-top: 50px;
+        }
+
+
+        &--item {
+
+            margin: 0;
+            flex: 1 1 100%;
+            padding: 11px 0px;
+
+            position: relative;
+            @include _769 {
+                &::before, &::after {
+                    display: none;
+                }
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                left: -10px; top: 63px;
+                width: calc(50% + 10px); height: calc(100% + var(--border-width));
+                border: var(--border-width) dashed var(--accent);
+                border-right: 0;
+                z-index: -1;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%; top: 63px;
+                width: calc(50% + 10px); height: calc(100% + var(--border-width));
+                border: var(--border-width) dashed var(--accent);
+                border-left: 0;
+                border-right: 0;
+                z-index: -1;
+            }
+            @include _769 {
+                flex: 0 1 26%;
+                margin: 10px;
+            }
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+
+            &:nth-child(odd) {
+                &::before {
+                    border-left: 0;
+                }
+                &::after {
+                    border-right: var(--border-width) dashed var(--accent);
+                }
+            }
+            &:nth-child(odd) &-decor {
+                &::before {
+                    left: auto;
+                    right: 20px;
+                }
+                &::after {
+                    left: auto;
+                    right: 5px;
+                }
+
+            }
+
+            &:nth-child(2)::after {
+                border-left: 0;
+                border-bottom: 0;
+                width: 100vw;
+            }
+            &:nth-child(even):last-child {
+                &::before {
+                    border-left: 0;
+                    border-bottom: 0;
+                    width: 100vw;
+                    left: auto;
+                    right: 0;
+                }
+                &::after {
+                    border-bottom: 0;
+                    border-right: 0;
+                    //width: 50vw;
+                    //left: 0;
+                }
+            }
+            &:nth-child(odd):last-child {
+                &::before {
+                    border-left: 0;
+                    border-bottom: 0;
+                    left: auto; right: calc(100% + (var(--border-width) + var(--border-width)));
+                    width: 100vw;
+                }
+                &::after {
+                    border-bottom: 0;
+                }
+            }
+
+            &-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 105px; height: 105px;
+
+                @include _769 {
+                    width: 143px; height: 138px;
+
+                }
+
+                position: relative;
+                z-index: 100;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0; top: 0;
+                    width: 100%; height: 100%;
+                    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+                    background: linear-gradient(339.94deg, rgba(78, 156, 219, 0.11) 34.09%, rgba(87, 97, 215, 0.11) 61.35%, rgba(118, 40, 218, 0.11) 95.25%);
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0; top: 0;
+                    width: 100%; height: 100%;
+                    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+                    background-color: var(--white);
+                    opacity: 1;
+                    z-index: -1;
+                }
+            }
+
+            &-img {
+                width: 35%;
+                @include _769 {
+                    width: auto;
+                }
+            }
+            &-decor {
+                position: absolute;
+                width: 100%; height: 100%;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 20px; top: 0;
+                    width: 16px; height: 16px;
+                    border-radius: 50%;
+                    background: var(--accent-gradient-decor);
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 5px; top: -9px;
+                    width: 3px; height: 3px;
+                    border-radius: 50%;
+                    background: var(--accent-gradient-decor);
+                }
+                @include _769 {
+                    &::before {
+                        width: 22px; height: 22px;
+                    }
+                    &::after {
+                        width: 4px; height: 4px;
+                    }
+                }
+            }
+            &-text {
+                padding-top: 20px;
+
+                text-align: center;
+                font-size: 1.0625rem;
+                font-weight: 500;
+                line-height: 153%;
+            }
+        }
+    }
+}

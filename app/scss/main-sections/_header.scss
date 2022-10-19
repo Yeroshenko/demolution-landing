@@ -1,0 +1,297 @@
+.header {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+
+    padding-right: var(--popup-padding);
+
+    transform: translate(0, var(--pos));
+
+    transition: transform .2s ease-in-out;
+
+    z-index: 99;
+
+    opacity: 0;
+    &._loaded {
+        opacity: 1;
+    }
+
+    @include _992 {
+        padding: 0px 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        background: var(--accent-gradient-dark);
+        opacity: 0;
+        z-index: -1;
+    }
+
+    &._active {
+        position: fixed;
+
+        box-shadow: 0 0 5px 1px rgba(#000000, 0.3);
+
+        &::before {
+            opacity: 1;
+        }
+    }
+    &._active &__container > * {
+        padding: 0px 0;
+        @include _992 {
+            padding: 5px 0;
+        }
+    }
+    &._active &__logo {
+        max-width: 155px;
+    }
+    &__logo {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: flex-start;
+        @include _992 {
+            flex: 0 1 auto;
+            display: block;
+        }
+        &--link {
+            max-width: 30vw;
+            min-width: 166px;
+            @include _769 {
+                max-width: 236px;
+            }
+
+        }
+        &--img {
+            width: 100%;
+        }
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include _769 {
+            justify-content: stretch;
+        }
+
+        & > * {
+            padding: 20px 0;
+        }
+    }
+    &__nav {
+        flex: 1 1 auto;
+
+        &._active &--block-body {
+            opacity: 1; visibility: visible;
+            transform: translate(0,0);
+            //transition: all .3s ease;
+        }
+        &._active &--block {
+            opacity: 1; visibility: visible;
+        }
+        &._active &--block::before {
+            opacity: .3;
+        }
+
+        --anim-duration: .4s;
+
+        &--block {
+            position: absolute;
+            top: 100%; right: 0;
+            width: 100vw; height: calc(100vh - 100%);
+
+            display: flex;
+            justify-content: flex-end;
+
+            overflow: hidden;
+
+            opacity: 0; visibility: hidden;
+            //transition: all .7s ease;
+
+            transition: all var(--anim-duration) ease-in-out;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0; top: 0;
+                width: 100%; height: 100%;
+                background-color: #000;
+                opacity: 0;
+                transition: opacity var(--anim-duration) ease;
+            }
+
+            @include _992 {
+                position: static;
+                width: auto; height: auto;
+
+                display: block;
+                opacity: 1; visibility: visible;
+
+                &::before {
+                    display: none;
+                }
+            }
+
+        }
+
+        &--block-body {
+            background: var(--accent-gradient-dark);
+            width: 300px;
+            height: 100%;
+            overflow-y: auto;
+            padding: 20px 20px;
+            display: flex;
+            flex-direction: column;
+
+            opacity: 0; visibility: hidden;
+            transform: translate(100%,0);
+
+            transition: all .4s ease-in-out;
+
+            @include _426 {
+                width: 373px;
+                padding: 20px 40px;
+            }
+            @include _992 {
+                padding: 0;
+                background: transparent;
+                width: auto; height: auto;
+                overflow-y: visible;
+
+                opacity: 1; visibility: visible;
+                transform: translate(0%,0);
+            }
+
+        }
+
+        /* &--bg {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100vw; height: 100vh;
+            background-color: #000;
+            transition: opacity var(--anim-duration) ease-in-out;
+            z-index: -1;
+            opacity: 0; visibility: hidden;
+        } */
+
+        &--body {
+
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+
+        }
+        &--list {
+            display: flex;
+            flex-direction: column;
+            padding-top: 25px;
+
+
+            @include _769 {
+                padding-top: 50px; padding-bottom: 25px;
+            }
+            @include _992 {
+                flex-direction: row;
+                padding-top: 0; padding-bottom: 0;
+            }
+
+        }
+        &--item {
+            width: 100%;
+            text-align: left;
+
+            @include _992 {
+                width: auto;
+                text-align: center;
+            }
+
+        }
+        &--link {
+            width: 100%;
+            color: var(--white, #FFFFFF);
+
+            display: inline-block;
+            padding: 15px 0;
+
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                color: var(--accent);
+            }
+            @include _426 {
+                font-size: 1.125rem;
+                padding: 20px 0;
+            }
+            @include _992 {
+                font-size: 1rem;
+                width: auto;
+                padding: 15px 25px;
+            }
+            @media(min-width: #{$container}px) {
+                padding: 15px 35px;
+            }
+
+            font-size: 1rem;
+
+        }
+    }
+    &__social-list {
+        @include _992 {
+            display: none;
+        }
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: -5px;
+        margin-top: auto;
+
+        &--item {
+            margin: 5px;
+        }
+
+        &--link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 35px; height: 35px;
+            @include _426 {
+                width: 40px; height: 40px;
+            }
+
+
+
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.12);
+            border-radius: 50%;
+            & svg {
+                width: 100%; height: 35%;
+            }
+        }
+    }
+    &__lang {
+
+        margin-right: 28px;
+
+        display: inline-block;
+
+        @include _769 {
+            position: relative;
+        }
+        @include _992 {
+            margin-right: 0px;
+            margin-left: 9px;
+        }
+    }
+    &__burger {
+        margin: 10px 0;
+        min-width: 75px;
+    }
+}

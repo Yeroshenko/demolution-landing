@@ -1,0 +1,86 @@
+@@include("html-components/_header-none.html")
+
+<div class="social-page-bg"></div>
+<section class="social-page">
+    <div class="social-page__footer-decor">
+        <div class="social-page__footer-decor--elem _decor-alt-min-hexagon _1"></div>
+        <div class="social-page__footer-decor--elem _decor-alt-min-hexagon _2"></div>
+    </div>
+    <div class="social-page__wrapper">
+        <div class="social-page__container _container">
+            <div class="social-page__bg">
+                <div class="social-page__bg--elem _1"></div>
+                <div class="social-page__bg--elem _2">
+                    <img src="img/social-page/decor-1.svg" width="0" alt="" class="social-page__bg--img" data-aos="fade-in" data-aos-delay="2200" data-aos-anchor=".social-page">
+                </div>
+                <div class="social-page__bg--elem _3">
+                    <img src="img/social-page/decor-1.svg" width="0" alt="" class="social-page__bg--img" data-aos="fade-in" data-aos-delay="2200" data-aos-anchor=".social-page">
+                </div>
+                <div class="social-page__bg--elem _4"></div>
+                <div class="social-page__bg--line _1">
+                    <span class="social-page__bg--circle"></span>
+                </div>
+                <div class="social-page__bg--line _2">
+                    <span class="social-page__bg--circle"></span>
+                </div>
+            </div>
+            <div class="social-page__body">
+                <div class="social-page__info">
+                    <span class="social-page__subtitle" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".social-page">
+                        JOIN US ON
+                    </span>
+                    <h1 class="social-page__title _main-title" data-aos="fade-in">
+                        <span class="_decor-title">
+                            We are in
+                        </span>
+                    </h1>
+                    <div class="social-page__block">
+                        <h2 class="social-page__block--title" data-aos="fade-in" data-aos-delay="600" data-aos-anchor=".social-page">
+                            Ты выбираешь лучшых!
+                        </h2>
+                        <div class="social-page__block--text" data-aos="fade-in" data-aos-delay="800" data-aos-anchor=".social-page">
+                            <p>
+                                Переходная страница с ссылками на наши активные соц. сети. Подписывайся, там будет много интересного!
+                            </p>
+                        </div>
+                        <ul class="social-page__list">
+                            @@loop("html-components/_social-page-item.html", [
+                                {"delay": '1200', "icon": '1', "name": 'Telegram chat', "href": 'https://t.me/+4DU0S-b6k8tiZmFi',
+                                "decor-style": '--left: 80%; --transform: translate(-50%,-50%); --transform-mob: translate(-10%,-65%);',
+                                "style": 'filter: drop-shadow(0px 4px 4px rgba(69, 106, 231, 0.38));'},
+
+                                {"delay": '1200', "icon": '2', "name": 'Web site', "href": 'https://www.demolution.club',
+                                "decor-style": '--left: 80%; --transform: translate(-50%,-50%); --transform-mob: translate(-10%,-65%);',
+                                "style": 'filter: drop-shadow(0px 6px 20px rgba(56, 159, 254, 0.63));'},
+
+                                {"delay": '1400', "icon": '3', "name": 'Platform education', "href": 'https://education.demolution.club',
+                                "decor-style": '--left: 80%; --transform: translate(40%,-30%) scaleX(-1); --transform-mob: translate(-10%,-80%) scaleX(-1);',
+                                "style": 'filter: drop-shadow(0px 6px 20px rgba(56, 159, 254, 0.63));'},
+
+                                {"delay": '1400', "icon": '4', "name": 'Instagram', "href": 'https://www.instagram.com/demolution_club_official',
+                                "decor-style": '--left: 80%; --transform: translate(40%,-30%) scaleX(-1); --transform-mob: translate(-10%,-80%) scaleX(-1);',
+                                "style": 'filter: drop-shadow(0px 4px 4px rgba(161, 17, 255, 0.5));'},
+
+                                {"delay": '1600', "icon": '5', "name": 'Youtube', "href": 'https://www.youtube.com/channel/UCiM70vgbItqUxyDvd3_vEtA',
+                                "decor-style": '--left: 80%; --transform: translate(40%,-30%) scaleX(-1); --transform-mob: translate(-10%,-80%) scaleX(-1);',
+                                "style": 'filter: drop-shadow(0px 4px 4px rgba(69, 106, 231, 0.5));'},
+                            ])
+                        </ul>
+                    </div>
+                </div>
+                <div class="social-page__video intro__video" data-aos="fade-in" data-aos-delay="2000" data-aos-anchor=".social-page">
+<!--                    <div class="social-page__video&#45;&#45;bg"></div>-->
+                    <div class="social-page__video--bg-elem _decor-hexagon _decor-alt-hexagon"></div>
+                    <video id="intro-video" autoplay muted loop class="social-page__video--block intro__video--block" playsinline data-src="video/planet-1500.mp4" poster="img/intro/planet-fallback.jpg">
+                        <source data-src="video/planet-370.mp4" data-mw="768" src="/">
+                        <source data-src="video/planet-546.mp4" data-mw="992" src="/">
+                        <source data-src="video/planet-1500.mp4" data-mw="1080" src="/">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@@include("html-components/_footer-without-social.html")

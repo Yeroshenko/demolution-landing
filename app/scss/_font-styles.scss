@@ -1,0 +1,251 @@
+@font-face {
+    @include font-include('HelveticaNeue', 700, swap, normal, 'HelveticaNeueCyr-Bold');
+}
+@font-face {
+    @include font-include('HelveticaNeue', 500, swap, normal, 'HelveticaNeueCyr-Medium');
+}
+@font-face {
+    @include font-include('HelveticaNeue', 400, swap, normal, 'HelveticaNeueCyr-Roman');
+}
+@font-face {
+    @include font-include('MazzardM', 700, swap, normal, 'MazzardM-Bold');
+}
+@font-face {
+    @include font-include('MazzardM', 800, swap, normal, 'MazzardM-ExtraBold');
+}
+@font-face {
+    @include font-include('MazzardM', 200, swap, normal, 'MazzardM-ExtraLight');
+}
+@font-face {
+    @include font-include('MazzardM', 300, swap, normal, 'MazzardM-Light');
+}
+@font-face {
+    @include font-include('MazzardM', 500, swap, normal, 'MazzardM-Medium');
+}
+@font-face {
+    @include font-include('MazzardM', 400, swap, normal, 'MazzardM-Regular');
+}
+@font-face {
+    @include font-include('MazzardM', 600, swap, normal, 'MazzardM-SemiBold');
+}
+//@font-face {
+//  @include font-include('Montserrat', 400, swap, normal, 'Montserrat-Regular');
+//}
+
+@font-face {
+    font-family: 'demolution-icons';
+    src:
+      url('demolution-icons.ttf?hhj9o8') format('truetype'),
+      url('demolution-icons.woff?hhj9o8') format('woff'),
+      url('demolution-icons.svg?hhj9o8#demolution-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+  [class^="_icon-"], [class*=" _icon-"] {
+
+    font-family: 'demolution-icons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ._icon-to-down-arrow::before {
+    content: "\e904";
+  }
+  ._icon-to-down-line::before {
+    content: "\e903";
+  }
+  ._icon-review-quotes::before {
+    content: "\e901";
+  }
+  ._icon-to-up-line::before {
+    content: "\e900";
+  }
+  ._icon-to-up-arrow::before {
+    content: "\e902";
+  }
+
+._main-title {
+    font-family: var(--main-font);
+    font-weight: 700;
+    color: var(--white);
+    font-size: 2.25rem;
+    line-height: 100%;
+    margin: 0;
+
+    @include _769 {
+        font-size: 3.625rem;
+    }
+    @include _992 {
+        font-size: 6rem;
+    }
+
+
+    & ._decor-title::before {
+
+        position: relative;
+        width: 75px; height: 75px;
+        margin-right: -75px; margin-top: -75px;
+        transform: translate(-15px,35%);
+
+
+        @include _769 {
+            width: 100px; height: 100px;
+
+            transform: translate(-25px,30%);
+            margin-right: -100px; margin-top: -100px;
+
+        }
+        @include _992 {
+            width: 150px; height: 150px;
+
+            margin-right: -175px; margin-top: -100px;
+            transform: translate(-45px,30%);
+        }
+
+    }
+}
+
+._accent-span {
+    color: transparent;
+    background: var(--accent-gradient-text);
+    background-clip: text;
+
+    &._alt {
+        color: transparent;
+        background: linear-gradient(180deg, #6D54DB 0%, #59A2DD 100%);
+        background-clip: text;
+    }
+}
+
+._accent-color {
+    font-weight: 600;
+    color: var(--accent);
+    &._alt {
+        color: var(--accent-alt);
+    }
+}
+
+._title {
+
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 1.6875rem;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    @include _769 {
+        font-size: 2.25rem;
+    }
+    @include _992 {
+        font-size: 3.5rem;
+    }
+
+
+    & ._decor-title::before {
+        width: 47px; height: 47px;
+        margin: -47px -47px -15px 0;
+        transform: translate(-25%,0%);
+
+        @include _769 {
+            width: 80px; height: 80px;
+            margin: -80px -90px -25px 0;
+            transform: translate(-25%,0%);
+
+        }
+        @include _992 {
+            width: 105px; height: 105px;
+            margin: -115px -120px -30px 0;
+            transform: translate(-50%,0%);
+
+        }
+
+    }
+
+    & ._decor-title._right::after {
+        width: 47px; height: 47px;
+        margin: -47px 0 -15px -47px;
+        transform: translate(30%,0%);
+
+        @include _769 {
+            width: 80px; height: 80px;
+            margin: -80px 0 -25px -90px;
+            transform: translate(25%,0%);
+
+        }
+        @include _992 {
+            width: 105px; height: 105px;
+            margin: -115px 0 -30px -120px;
+            transform: translate(50%,0%);
+
+        }
+
+    }
+    &._min {
+        font-size: 1rem;
+        font-weight: 800;
+        @include _769 {
+            font-size: 1.25rem;
+
+        }
+        @include _992 {
+            font-size: 1.625rem;
+            font-weight: 700;
+        }
+
+        line-height: 135%;
+
+        & ._decor-title::before {
+            width: 40px; height: 40px;
+            transform: translate(-5%,0%);
+            margin: -50px -25px -15px 0;
+
+            @include _769 {
+                width: 50px; width: 50px;
+                margin: -50px -60px 0 0;
+            }
+            @include _992 {
+                width: 60px; height: 60px;
+                margin: -60px -75px 0 0;
+            }
+
+        }
+        & ._decor-title._right::after {
+            width: 40px; height: 40px;
+            transform: translate(30%,30%);
+            margin: -50px 0 -3px -40px;
+            @include _769 {
+                width: 50px; width: 50px;
+                margin: -50px 0 0 -60px;
+            }
+            @include _992 {
+                transform: translate(30%,35%);
+                width: 55px; height: 55px;
+                margin: -550px 0 0 -60px;
+            }
+
+        }
+
+    }
+
+    &._subtitle-type {
+        font-size: 1.125rem;
+        @include _992 {
+            font-size: 1.35rem;
+        }
+        font-weight: 600;
+        line-height: 132%;
+        text-transform: none;
+
+    }
+}
+
