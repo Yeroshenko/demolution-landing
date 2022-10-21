@@ -1,0 +1,12 @@
+Index: .gitignore
+===================================================================
+diff --git a/.gitignore b/.gitignore
+--- a/.gitignore	
++++ b/.gitignore	
+@@ -1,6 +1,2 @@
+ node_modules
+-yarn.lock
+-package-lock.json
+ .idea
+-demolution.zip
+-demolution

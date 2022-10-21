@@ -215,3 +215,49 @@ AOS.init({
     easing: 'ease-in-out',
     offset: 50
 });
+
+function roadmapArrow() {
+
+    let roadmapInner = document.querySelector('.roadmap__inner'),
+        dateStart = roadmapInner.dataset.startDate,
+        dateEnd = roadmapInner.dataset.endDate,
+        currentDate = new Date(),
+        daysLength, currentProgress;
+
+    dateStart = new Date(dateStart);
+    dateEnd = new Date(dateEnd);
+    
+    var timeDiff = Math.abs(dateStart.getTime() - dateEnd.getTime());
+    if(dateStart.getTime() > currentDate.getTime()) {
+        currentProgress = 0;
+    } else {
+        currentProgress = Math.abs(dateStart.getTime() - currentDate.getTime());
+    }
+    
+    daysLength = Math.ceil(timeDiff / (1000 * 3600 * 24));
+    currentProgress = Math.ceil(currentProgress / (1000 * 3600 * 24));
+
+    let result = currentProgress / daysLength * 100;
+    console.log(dateStart.getTime() + ' ' + currentDate.getTime());
+
+    roadmapInner.style.setProperty('--arrow-height', result + '%');
+
+    roadmapInner.querySelectorAll('.ellipse').forEach(ellipse => {
+        
+        if(ellipse.classList.contains('_mob')) {
+            ellipse.setAttribute('cy', result - 9 + '%')
+        } else {
+            ellipse.setAttribute('cy', result - 12 + '%')
+        }
+
+        
+        //console.log(ellipse)
+    })
+
+    roadmapInner.querySelectorAll('.rect').forEach(rect => {
+        rect.setAttribute('height', result + '%')
+    })
+
+}
+
+roadmapArrow();
